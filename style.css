@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Libre+Baskerville:wght@700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Vollkorn:wght@500&display=swap');
+:root{
+    --green:#158da5;
+    --black:#192a56;
+    --light-color:#7f7e7e;
+    --red:#e00505;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,1);
+}
+
+*{
+    font-family: 'Nunito',sans-serif;
+    margin: 0;padding: 0;   
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{   
+    font-size:62%;
+    overflow-x: hidden;
+    scroll-padding-top: 1rem; 
+    scroll-behavior: smooth;
+}
+section{
+    padding: 5rem 4%;
+    padding-top: 1rem;
+}
+section:nth-child(even){
+    background: rgba(144, 233, 230, 0.239);
+}
+
+.btn{
+    margin-top: 15px;
+    display: inline-block;
+    font-size: large;
+    color: #fff;
+    background: var(--green);
+    border-radius: 10px;
+    cursor: pointer;
+    padding:10px 7px ;
+    
+}
+.btn:hover{
+    color: #fff;
+    background-color: var(--black);
+    border:solid 1px var(--green);
+}
+header{   /*nav bar box */
+   position: sticky;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 1 rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+.logo-img{
+max-width: 150px;
+margin-left: 2px;
+margin-top: 2px;
+}
+.logos{
+    display:flex;
+    align-items: center;
+    gap: 3px;
+}
+.logo{  /*logo leters "AAA Party... */
+    color: var(--green);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.navbar a{ /* navbar menu */
+    font-size: x-large;
+    border-radius: .5rem;
+    padding: .5rem;
+    color: var(--green);
+    font-weight: 600;
+}
+.navbar a:hover{
+    color: #fff;
+    background-color: var(--green);
+}    
+
+header .icons i{  /*fa -icons */
+    cursor: pointer;
+    font-size: x-large;
+    margin-right: 2rem;
+    color: var(--green);
+    border-radius: 50%;
+    border: solid var(--green);
+    text-align: center;
+   height: 4.7rem;
+   width: 4.7rem;
+   line-height: 4.4rem;
+   border-radius: 50%;
+}
+#bars{
+    display: none; /*hide the burger menu on big Screen*/
+}
+
+
+header .icons i:hover{ /*hover cartshopping */
+    text-align: center;
+   height: 4.5rem;
+   width: 4.5rem;
+   line-height: 4.5rem;
+   border-radius: 50%;
+   background-color: var(--green);
+   color: #fff;
+}
+#home{
+padding-top: 0;
+    }
+.home-slider{
+    padding-top: 1rem;
+    background: #ffff;
+    overflow: hidden;
+}
+.home .home-slider .wrapper .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    height: max-content;
+}
+.home .home-slider .wrapper .slide .content{
+    flex:1 1 45rem;  
+    padding-top: 10px;
+    text-align: center;
+}
+.home .home-slider .wrapper .slide .image{
+    flex:1 1 45rem; 
+    height: 100%;
+}
+.home .home-slider .wrapper .slide .image img{
+    width: 100%;
+    height: 100%;
+}
+.home .home-slider .wrapper .slide .content span{
+    color: var(--green);
+    font-size: xx-large;
+}
+.home .home-slider .wrapper .slide .content h3{
+    color: var(--black);
+    font-size: 7rem;
+}
+.home .home-slider .wrapper .slide .content p{
+    color: var(--light-color);
+    text-align: justify;
+    font-size: 2rem;
+    padding-top: 8px;
+    margin: 5px;
+}
+
+/*Products */
+.products{
+    background: rgba(144, 233, 230, 0.239);
+    padding-top: 110px;
+}
+.sub-heading{
+    text-align: center;
+    color: var(--green);
+    font-size: x-large;
+}
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: xx-large;
+    padding: 20px;
+    text-transform: uppercase;
+}
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    gap: 5px;
+}
+.products .box-container .box{
+    padding: 2rem;
+    background: #fff;
+    border: 2px solid rgba(0,0,0,0.5);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
+}
+.products .box-container .box img{
+    max-width:305px;
+    max-height: 305px;
+    margin: 10px;
+}
+.products .box-container .box h3{
+    color: var(--green);
+    font-size: x-large;
+    padding-bottom: 10px;
+}
+.products .box-container .box span{
+    color: var(--black);
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+.products .box-container .box p{
+    color: var(--light-color);
+    font-size: medium;
+    padding-top: 8px;
+}
+/* AboutUs section*/
+.about{
+    padding-top: 100px;
+}
+.about .heading{
+    color: var(--green);
+}
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+
+}
+.about .row .image{
+    flex: 1 1 300px;
+   justify-items: center;
+ }
+.about .row .image img{
+    width: 100%;
+    border-radius: 18px;
+}
+.about .row .content{
+    flex: 1 1 500px;
+    padding: 20px;
+    justify-content: center;
+    background: #fff;
+    line-height: 4rem;
+    border-radius: 18px;
+    box-shadow: var(--box-shadow);
+}
+.about .row .content h3{
+    color: var(--green);
+    font-size: x-large;
+    padding: 10px;
+} 
+
+.about .row .content p{
+    color: var(--light-color);
+    font-size: large;
+    padding: 10px 0;
+    line-height: 22px;    
+} 
+.about .row .content .icons-container{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    padding: 1rem 0;
+    margin-top: 5px;
+    width:100% ;
+}
+
+#aboutus3{
+width: 100%;
+border-radius: 15px;
+}
+
+
+.contactus{
+    padding-top: 100px;
+    background: rgba(144, 233, 230, 0.239);
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.contactus .heading{
+    color: var(--green);
+}
+#card-contact{
+   gap: 15px;
+    display: flex;
+}
+.contactus .content {
+    background: #ffff;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 20px;
+    border: 2px solid var(--green);
+    box-shadow: var(--box-shadow);
+    position: relative;
+ 
+}
+.contactus .content .card-top{
+    background: #ffffff;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+.contactus .content .card-top .card-text{
+    background-color: #ffffff;
+    padding-top: 10px;
+}
+.contactus .content .card-top .card-text h2{
+    color: var(--green);
+    font-size: x-large;
+    font-weight: bold;
+}
+.contactus .content .card-top .card-text h3{
+    color: var(--red);
+    font-size: large;
+    font-weight: bold;
+    line-height: 4rem;
+}
+.contactus .content .card-top .card-text h4{
+    color: var(--light-color);
+    font-size: large;
+    font-weight: bold;
+    line-height: 2rem;
+}
+.logo-img2{
+    width: 150px;
+    top: 50px;
+    right: -5px;
+    position: relative;
+}
+.contactus .content .card-bottom a{
+ font-size: large;   
+ color: var(--green);
+ line-height: 3rem;
+}
+.contactus .content .card-bottom a:hover{
+    font-size: 20px;
+    font-weight: bold;
+}
+.contactus .socialm{
+    text-decoration: none;
+    font-size: x-large;
+     list-style: none; 
+     color: var(--green);
+     text-align: center;  
+}
+.contactus .socialm a{
+    text-decoration: none;
+    color: var(--green);
+    font-weight: bold;
+}
+.contactus .socialm i{
+    padding-top: 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50% ;
+    padding: 10px;
+    margin: 7px;
+    background:rgb(184, 185, 184);
+    justify-content: center;
+    align-items: center;
+    color: var(--black);   
+}
+#snap-icon:hover{
+    background: rgb(228, 228, 1);
+    color: #fff;
+}
+#face-icon:hover{
+    background: blue;
+    color: #fff;
+}
+#whats-icon:hover{
+    background: green;
+    color: #fff; 
+}
+#insta-icon:hover{
+    background: linear-gradient(-40deg, #fdf497, #fd5949 , #d6249f,  #285AEB);
+    color: #fff;
+}
+
+.footer{
+    max-width:1800px;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #1c1c1cd8;
+    color: #ffff;   
+    font-size: small;
+}
+.social-footer a{
+    text-decoration: none;
+    color: #ffff; 
+
+}
+
+.social-footer a:hover {
+    text-decoration: none;
+    color:var(--green); 
+    background: #ffffff;
+    font-size: medium;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.foot1 a{
+    text-decoration: none;
+    color: #ffff; 
+}
+.foot1 a:hover{
+    background-color: #fff;
+    color:var(--green);
+     font-size: medium;
+     font-weight: bold;
+}
+.footer-main{
+    display: grid;
+    justify-content: space-around;
+    margin: auto;
+    grid-template-columns: minmax(20px,300px)  minmax(20px,300px) ;
+    grid-template-rows: 1fr ;
+    
+}
+.footer-copyright{
+    padding-top: 5px;
+    color: var(--green);
+    text-align: center;
+}
+
+
+
+
+/*Media queries */
+@media (max-width:900px){
+    html{   
+        font-size:55%;
+    }
+    header{
+        padding: 1rem, 2rem;
+    }
+    section{
+        padding: 3rem;
+    }
+    .logo{  /*logo leters "AAA Party... */
+        font-size:x-large;
+    }
+    .home .home-slider .wrapper .slide{
+    height: max-content;
+    }
+    .products .box-container .box img{
+        height: auto;
+        width: 100%;
+    }
+}
+@media (max-width:541px){
+    #bars{
+        display:block;
+        position: absolute;
+        right: 1rem; top:1rem;
+    }
+    #bars:hover{/*hover burger menu*/
+        text-align: center;
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        border-radius: 50%;
+        background-color: var(--green);
+        color: #fff;
+    }
+    header{ 
+        justify-content: center;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.5);
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+        padding: 2px;
+        clip-path: polygon(0 0, 100% 0, 0 0);
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: x-large;
+        background-color: #eee;
+    }
+    .logos{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .logo{  /*logo leters "AAA Party... */
+        color: var(--green);
+        font-size: large;
+        font-weight:600;
+    }
+    .home .home-slider .wrapper .slide .content h3{
+        color: var(--black);
+        font-size: xx-large;
+    }
+    .products .box-container .box img{
+        height: auto;
+        width: 100%;
+        margin: 2px;
+    }
+    #aboutus3{
+        width: 100%;
+        }
+    .about .row .content .icons-container{
+        justify-content: center;
+    }
+    .contactus .content .card-top .card-text h2{
+        color: var(--green);
+        font-size: x-large;
+        font-weight: bold;
+    }
+    .contactus .content .card-top .card-text h3{      
+        font-size: small;
+    }
+    .contactus .content .card-top .card-text h4{
+        font-size: medium;
+    }
+    .logo-img2{
+        width: 80px;
+        height: 69px;
+        top: 10px;
+        right: -5px;
+        position: relative;
+    }
+    .contactus .content .card-bottom a{
+     font-size: medium;   
+    }
+    .contactus .content .card-bottom a:hover{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #card-contact{
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+
+     }
+}
+
